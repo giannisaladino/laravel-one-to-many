@@ -8,6 +8,7 @@
                 <tr>
                     <th>ID</th>
                     <th>Name</th>
+                    <th>Type</th>
                     <th>Slug</th>
                     <th>Date</th>
                     <th></th>
@@ -19,7 +20,7 @@
                 <tr>
                     <th>{{ $project->id }}</th>
                     <td><a href="{{ route('admin.projects.show', $project) }}">{{ $project->name }}</a></td>
-                    <!-- <td>{{ $project->type_id }}</td> -->
+                    <td class="text-center">{{ $project->type_id }}</td>
                     <td>{{ $project->slug }}</td>
                     <td>{{ $project->date }}</td>
                     <td><a class="btn btn-primary" href="">EDIT</a></td>
