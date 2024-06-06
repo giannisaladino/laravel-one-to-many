@@ -19,10 +19,11 @@
                 <tr>
                     <th>{{ $project->id }}</th>
                     <td><a href="{{ route('admin.projects.show', $project) }}">{{ $project->name }}</a></td>
+                    <!-- <td>{{ $project->type_id }}</td> -->
                     <td>{{ $project->slug }}</td>
                     <td>{{ $project->date }}</td>
-                    <td><button class="btn btn-primary">EDIT</button></td>
-                    <td><button class="btn btn-danger" >DELETE</button></td>
+                    <td><a class="btn btn-primary" href="">EDIT</a></td>
+                    <td><a class="btn btn-danger" href="">DELETE</a></td>
                 </tr>
                 @endforeach
             </tbody>
