@@ -2,10 +2,13 @@
 
 @section('content')
 <section>
-    <div class="container mt-5">
+    <div class="container mt-4 d-flex justify-content-end">
+        <a class="btn btn-success"  href="{{ route('admin.projects.create') }}">Crea un nuovo progetto</a>
+    </div>
+    <div class="container mt-4">
         <table class="table">
             <thead>
-                <tr>
+                <tr class="text-center" >
                     <th>ID</th>
                     <th>Name</th>
                     <th>Type</th>
@@ -17,7 +20,7 @@
             </thead>
             <tbody>
                 @foreach ($projects as $project )
-                <tr>
+                <tr class="text-center" >
                     <th>{{ $project->id }}</th>
                     <td><a href="{{ route('admin.projects.show', $project) }}">{{ $project->name }}</a></td>
                     <td>{{ $project->type->name}}</td>
